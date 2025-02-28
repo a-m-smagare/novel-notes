@@ -1,0 +1,14 @@
+.about {
+    margin-top: clamp(20px, 6vw, 50px);
+    margin-bottom: clamp(20px, 6vw, 50px);
+}
+
+h2 {
+    font-weight: bold;
+    font-size: max(2.1vw, 22px);
+    margin-bottom: 1.5rem;
+}
+
+p {
+    width: 90%;
+}

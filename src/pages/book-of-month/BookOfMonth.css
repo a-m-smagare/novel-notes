@@ -1,0 +1,58 @@
+#bookofmonth {
+    height: 75vh;
+    margin: 20px 0;
+    background: url("/bookofmonth-background.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 3vw;
+}
+
+.intro {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    max-width: 60%;
+    text-align: center; 
+    z-index: 2; 
+    animation: fadeIn 3s;
+}
+
+.intro h2 {
+    font-weight: 500;
+    color: white;
+    font-size: max(3.2vw, 22px);
+    margin-bottom: 2%;
+}
+
+.intro p {
+    color: white;
+    text-align: center;
+}
+
+.text p {
+    text-align: center;
+    margin: auto;
+}
+
+.hrBookOfMonth {
+    width: 15%;          
+    margin: 20px auto;   
+    border: 1px solid #777777;  
+    background-color: #777777;  
+}
+
+@media (max-width: 420px) {
+    .intro h2 {
+        font-size: 17px;
+    }
+    
+    .intro p {
+        font-size: 14px;
+    }
+}

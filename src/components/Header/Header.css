@@ -1,0 +1,101 @@
+.header {
+    height: 75vh;
+    margin: 20px 0;
+    background: url("/header-background.jpg") no-repeat center center;
+    background-size: cover;
+    border-radius: 15px;
+    position: relative;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.header-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+    max-width: 50%;
+    text-align: center; 
+    z-index: 2; 
+    animation: fadeIn 3s;
+}
+
+.header-content h2 {
+    font-weight: 500;
+    color: white;
+    font-size: max(2.8vw, 22px);
+    margin-bottom: 4%;
+}
+
+.header-content button {
+    font-size: max(1vw, 13px);
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.register-btn {
+    padding: 0.5vw 2.3vw;
+    background-color: white;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background-color: rgb(224, 224, 201);
+    transform: translateY(-2px); 
+}
+
+.login-btn {
+    padding: 0.5vw 2.9vw;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background-color: rgba(224, 224, 201, 0.281);
+    transform: translateY(-2px); 
+}
+
+.auth-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+@media (max-width: 900px) {
+    .header-content {
+        gap: 2.8vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .auth-buttons {
+        margin-top: 5%;
+    }
+
+    .register-btn {
+        padding: 0.8vw 2.5vw;
+    }
+    
+    .register-btn:hover {
+        background-color: rgb(224, 224, 201);
+        transform: translateY(-2px); 
+    }
+    
+    .login-btn {
+        padding: 0.8vw 3.1vw;
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+}

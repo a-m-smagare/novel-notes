@@ -1,0 +1,52 @@
+.bookcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vw 0;
+    gap: 20px;
+    border: none; 
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 3rem 1rem;
+}
+
+.bookcard img {
+    width: 200px;
+}
+
+.bookcard h2 {
+    margin: 0;
+}
+
+.bookcard h4,
+.bookcard h5 {
+    color: rgb(95, 95, 95);
+}
+
+.bookcard p {
+    text-align: center;
+}
+
+.bookinfo {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 2vw;
+}
+
+.title-author {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 750px) {
+    .bookinfo {
+        flex-direction: column;
+    }
+
+    .title-author {
+        text-align: center;
+    }
+}
