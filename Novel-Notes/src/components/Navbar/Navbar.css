@@ -1,0 +1,57 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.navbar .logo {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    padding-top: 5vh;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    font-size: 18px;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(71, 71, 71);
+}
+
+.menu .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(71, 71, 71);
+}
+
+@media (max-width: 1040px) {
+    .menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 900px) {
+    .menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 750px) {
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar {
+        justify-content: center;
+    }
+}
