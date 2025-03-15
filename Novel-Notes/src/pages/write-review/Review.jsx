@@ -23,7 +23,7 @@ const Review = () => {
 
     try {
       const method = reviewId ? "PUT" : "POST";
-      const endpoint = reviewId ? `${process.env.REACT_API_URL}/user/edit-review/${reviewId}` : `${process.env.REACT_API_URL}/user/add-review`;
+      const endpoint = reviewId ? `https://novel-notes-mjoz.onrender.com/user/edit-review/${reviewId}` : `https://novel-notes-mjoz.onrender.com/user/add-review`;
 
       const response = await fetch(endpoint, {
         method,

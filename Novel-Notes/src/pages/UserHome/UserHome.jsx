@@ -18,7 +18,7 @@ const UserHome = () => {
 
     const fetchUserReviews = async () => {
       try {
-        const response = await fetch(`${process.env.REACT_API_URL}/user/user-reviews`, {
+        const response = await fetch("https://novel-notes-mjoz.onrender.com/user/user-reviews", {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,

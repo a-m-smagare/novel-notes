@@ -20,7 +20,7 @@ const User = () => {
       }
 
       try {
-        const response = await fetch(`${process.env.REACT_API_URL}/user/user-profile`, {
+        const response = await fetch("https://novel-notes-mjoz.onrender.com/user/user-profile", {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${token}`,
@@ -58,7 +58,7 @@ const User = () => {
     const confirmDelete = window.confirm("Are you sure you want to delete your account?");
     if (confirmDelete) {
       try {
-        const response = await fetch("http://localhost:5000/user/delete", {
+        const response = await fetch("https://novel-notes-mjoz.onrender.com/user/delete", {
           method: "DELETE",
           headers: {
             "Authorization": `Bearer ${localStorage.getItem("token")}`

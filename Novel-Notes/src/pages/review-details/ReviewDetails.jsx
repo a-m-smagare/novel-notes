@@ -18,7 +18,7 @@ const ReviewDetails = () => {
 
         const fetchReview = async () => {
           try {
-            const response = await fetch(`${process.env.REACT_API_URL}/user/reviews/${id}`, { // Fetch to route
+            const response = await fetch(`https://novel-notes-mjoz.onrender.com/user/reviews/${id}`, { // Fetch to route
               method: "GET",
               headers: {
                 Authorization: `Bearer ${token}`,
@@ -46,7 +46,7 @@ const ReviewDetails = () => {
 
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch(`${process.env.REACT_API_URL}/user/delete-review/${id}`, {
+            const response = await fetch(`https://novel-notes-mjoz.onrender.com/user/delete-review/${id}`, {
                 method: "DELETE",
                 headers: {
                     Authorization: `Bearer ${token}`,

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import "./LoginPopUp.css";
+import "./LoginPopup.css";
 import { assets } from '../../assets/assets';
 
 const LoginPopUp = ({setShowLogin, setShowRegister}) => {
@@ -18,7 +18,7 @@ const LoginPopUp = ({setShowLogin, setShowRegister}) => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`${process.env.REACT_API_URL}/auth/login`, {
+    const res = await fetch("https://novel-notes-mjoz.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, password }),

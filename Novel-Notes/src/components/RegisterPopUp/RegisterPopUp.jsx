@@ -19,7 +19,7 @@ const RegisterPopUp = ({setShowRegister, setShowLogin}) => {
       return;
     }
 
-    const res = await fetch(`${process.env.REACT_API_URL}/auth/register`, {
+    const res = await fetch("https://novel-notes-mjoz.onrender.com/auth/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, username, password }),
