@@ -14,6 +14,11 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
 });
 
+// Check if database connection works
+pool.connect()
+    .then(() => console.log("✅ Connected to the database successfully!"))
+    .catch((err) => console.error("❌ Database connection error:", err));
+
 // Test route
 app.get("/", (req, res) => {
     res.json({ message: "✅ Backend is running!" });
