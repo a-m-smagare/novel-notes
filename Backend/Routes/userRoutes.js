@@ -7,6 +7,7 @@ const router = express.Router();
 
 const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
+    ssl: { rejectUnauthorized: false },
   });
 
 router.get("/user-home", authMiddleware, (req, res) => {
