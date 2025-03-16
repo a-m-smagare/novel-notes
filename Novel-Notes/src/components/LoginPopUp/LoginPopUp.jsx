@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "./LoginPopup.css";
 import { assets } from '../../assets/assets';
+import { useNavigate } from "react-router-dom";
 
 const LoginPopUp = ({setShowLogin, setShowRegister}) => {
   
@@ -18,6 +19,8 @@ const LoginPopUp = ({setShowLogin, setShowRegister}) => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
+    const navigate = useNavigate();
+    
     const res = await fetch("https://novel-notes-mjoz.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -28,7 +31,7 @@ const LoginPopUp = ({setShowLogin, setShowRegister}) => {
 
     if (res.ok) {
       localStorage.setItem("token", data.token);
-      window.location.href = "/user-home"; // Redirect to the user home page
+      navigate("/user-home"); // Redirect to the user home page
     } else {
       alert(data.message); // Show error message if login fails
     }
