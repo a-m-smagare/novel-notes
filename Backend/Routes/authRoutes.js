@@ -16,6 +16,8 @@ router.get("/", (req, res) => {
 });
 
 router.post("/login", async (req, res) => {
+    console.log("✅ Login route hit!");
+    res.json({ message: "Login route is working!" });
     const { username, password } = req.body;
 
     try {
