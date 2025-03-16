@@ -18,26 +18,26 @@ router.get("/", (req, res) => {
 router.post("/login", async (req, res) => {
     console.log("✅ Login route hit!");
     res.json({ message: "Login route is working!" });
-    // const { username, password } = req.body;
+    const { username, password } = req.body;
 
-    // try {
-    //     const user = await pool.query("SELECT * FROM users WHERE username = $1", [username]);
+    try {
+        const user = await pool.query("SELECT * FROM users WHERE username = $1", [username]);
 
-    //     if (user.rows.length === 0) {
-    //         return res.status(400).json({ message: "Invalid username or password" });
-    //     }
+        if (user.rows.length === 0) {
+            return res.status(400).json({ message: "Invalid username or password" });
+        }
 
-    //     const isMatch = await bcrypt.compare(password, user.rows[0].password);
-    //     if (!isMatch) {
-    //         return res.status(400).json({ message: "Invalid username or password"});
-    //     }
+        const isMatch = await bcrypt.compare(password, user.rows[0].password);
+        if (!isMatch) {
+            return res.status(400).json({ message: "Invalid username or password"});
+        }
 
-    //     const token = jwt.sign({ userId: user.rows[0].id }, process.env.JWT_SECRET, { expiresIn: "1h"});
+        const token = jwt.sign({ userId: user.rows[0].id }, process.env.JWT_SECRET, { expiresIn: "1h"});
 
-    //     res.json({ token, user: user.rows[0] });
-    // } catch (error) {
-    //     res.status(500).json({ error: error.message});
-    // }
+        res.json({ token, user: user.rows[0] });
+    } catch (error) {
+        res.status(500).json({ error: error.message});
+    }
 });
 
 router.post("/register", async (req, res) => {
