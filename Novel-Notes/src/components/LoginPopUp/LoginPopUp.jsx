@@ -7,6 +7,7 @@ const LoginPopUp = ({setShowLogin, setShowRegister}) => {
   
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -18,8 +19,6 @@ const LoginPopUp = ({setShowLogin, setShowRegister}) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    const navigate = useNavigate();
     
     const res = await fetch("https://novel-notes-mjoz.onrender.com/auth/login", {
       method: "POST",
