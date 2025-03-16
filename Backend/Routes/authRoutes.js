@@ -10,6 +10,11 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL
 });
 
+// Test route
+router.get("/", (req, res) => {
+    res.json({ message: "Auth route is working!" });
+});
+
 router.post("/login", async (req, res) => {
     const { username, password } = req.body;
 
