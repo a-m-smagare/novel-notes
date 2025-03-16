@@ -14,6 +14,11 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_URL,
 });
 
+// Test route
+app.get("/", (req, res) => {
+    res.json({ message: "✅ Backend is running!" });
+});
+
 app.use("/auth", authRoutes);
 app.use("/user", userRoutes);
 
