@@ -5,6 +5,7 @@ Built with **React, Express, PostgreSQL, and JWT authentication**.
 
 ## Demo
 https://novel-notes-book-reviews.onrender.com
+
 Note: The demo page may take some time to load initially because the project is hosted on Render's free tier, which can result in slower response times, especially if the application has been inactive for some time. Please be patient while the page loads.
 
 ## Features  
@@ -28,41 +29,6 @@ Note: The demo page may take some time to load initially because the project is 
 - **Passwords are hashed** using bcrypt before being stored in the database  
 - **JWT is used for authentication**, ensuring only logged-in users can access certain pages  
 - **Middleware verifies tokens** and restricts unauthorized access to API routes  
-
-## Project Structure  
-Novel-Notes/
-├── Backend/
-│   ├── Middleware/
-│   │   └── authMiddleware.js     # To check if user is authorised
-│   ├── Routes/
-│   │   ├── authRoutes.js         # Handles login and registration
-│   │   └── userRoutes.js         # Handles user requests
-│   └── server.js              
-│   
-├── Novel-Notes/                  # Frontend
-│   ├── public/                   # .jpg files
-│   ├── src/
-│   │   ├── assets/               # .png files 
-│   │   ├── components/           # Reusable components
-│   │   │   ├── About/
-│   │   │   ├── BookCard/
-│   │   │   ├── Footer/
-│   │   │   ├── Header/
-│   │   │   ├── HowItWorks/
-│   │   │   ├── LoginPopUp/
-│   │   │   ├── Navbar/
-│   │   │   └── RegisterPopUp/
-│   │   ├── pages/               # Page components
-│   │   │   ├── book-of-month/
-│   │   │   ├── homepage/
-│   │   │   ├── review-details/
-│   │   │   ├── user-profile/
-│   │   │   ├── user-home/
-│   │   │   └── write-review/
-│   │   ├── App.jsx              # Main App components
-│   │   └── main.jsx             # React entry point
-│   ├── index.html
-└── README.md
 
 ## API Endpoints  
 | Method | Endpoint | Description | Auth Required |
