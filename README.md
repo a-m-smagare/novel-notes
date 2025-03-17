@@ -3,6 +3,10 @@
 A full-stack web application for users to log in, write book reviews, and manage them. 
 Built with **React, Express, PostgreSQL, and JWT authentication**.
 
+## Demo
+https://novel-notes-book-reviews.onrender.com
+Note: The demo page may take some time to load initially because the project is hosted on Render's free tier, which can result in slower response times, especially if the application has been inactive for some time. Please be patient while the page loads.
+
 ## Features  
 - **User Authentication** (JWT-based login/registration with hashed passwords)  
 - **CRUD Operations** (Create, Read, Update, Delete book reviews)  
@@ -26,22 +30,39 @@ Built with **React, Express, PostgreSQL, and JWT authentication**.
 - **Middleware verifies tokens** and restricts unauthorized access to API routes  
 
 ## Project Structure  
-/Novel-Notes (Frontend)
-  ├── public/          # .jpg files
-  ├── src/
-      ├── assests/     # .png files
-      ├── components/  # Reusable React components
-      ├── pages/       # Page components
-      ├── App.jsx      # Main App component
-      ├── main.jsx     # React entry point
-
-/Backend
-  ├── Routes/
-      ├── authRoutes.js  # Handles login & registration
-      ├── userRoutes.js  # Handles user actions (profile, reviews)
-  ├── Middleware/
-      ├── authMiddleware.js  # JWT authentication middleware
-  ├── server.js  # Express server setup
+Novel-Notes/
+├── Backend/
+│   ├── Middleware/
+│   │   └── authMiddleware.js     # To check if user is authorised
+│   ├── Routes/
+│   │   ├── authRoutes.js         # Handles login and registration
+│   │   └── userRoutes.js         # Handles user requests
+│   └── server.js              
+│   
+├── Novel-Notes/                  # Frontend
+│   ├── public/                   # .jpg files
+│   ├── src/
+│   │   ├── assets/               # .png files 
+│   │   ├── components/           # Reusable components
+│   │   │   ├── About/
+│   │   │   ├── BookCard/
+│   │   │   ├── Footer/
+│   │   │   ├── Header/
+│   │   │   ├── HowItWorks/
+│   │   │   ├── LoginPopUp/
+│   │   │   ├── Navbar/
+│   │   │   └── RegisterPopUp/
+│   │   ├── pages/               # Page components
+│   │   │   ├── book-of-month/
+│   │   │   ├── homepage/
+│   │   │   ├── review-details/
+│   │   │   ├── user-profile/
+│   │   │   ├── user-home/
+│   │   │   └── write-review/
+│   │   ├── App.jsx              # Main App components
+│   │   └── main.jsx             # React entry point
+│   ├── index.html
+└── README.md
 
 ## API Endpoints  
 | Method | Endpoint | Description | Auth Required |
@@ -69,8 +90,7 @@ Built with **React, Express, PostgreSQL, and JWT authentication**.
 
 ## Setup & Installation  
 1. **Clone the repository:**  
-   git clone https://github.com/your-username/book-review-app.git
-   cd book-review-app
+   git clone https://github.com/a-m-smagare/novel-notes.git
 2. **Install dependencies:**  
    npm install
 3. **Set up environmental variables (in .env file):**
